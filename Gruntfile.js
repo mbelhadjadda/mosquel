@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         },
         watch: {
             karma: {
-                files: ['client/src/*.js', 'test/unit/*.js'],
+                files: ['client/src/**/*.js', 'client/test/**/*.js'],
                 tasks: ['karma:unit:run']
             }
         }
@@ -19,4 +19,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('devmode', ['karma:unit', 'watch']);
+    grunt.registerTask('test', ['karma:unit:run'])
 };

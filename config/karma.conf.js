@@ -5,15 +5,15 @@ module.exports = function(config){
     files : [
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
-        'client/*.js',
-        'test/unit/*.js'
+        'client/**/*.js',
+        'client/test/**/*.js'
     ],
 
     autoWatch : false,
 
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers: ['PhantomJS'],
 
     plugins : [
             'karma-junit-reporter',
@@ -23,7 +23,7 @@ module.exports = function(config){
             'karma-jasmine'
             ],
 
-junitReporter : {
+    junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
     }
